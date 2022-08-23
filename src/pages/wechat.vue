@@ -115,15 +115,8 @@ useFavicon().value = 'cookie.svg'
 </script>
 
 <template>
-  <div
-    ref="el"
-    p="x-4 y-2"
-    border="~ gray-400 rounded"
-    shadow="~ hover:lg"
-    class="fixed bg-$vt-c-bg select-none cursor-wait z-10"
-    style="touch-action:none;"
-    :style="style"
-  >
+  <div ref="el" p="x-4 y-2" border="~ gray-400 rounded" shadow="~ hover:lg"
+    class="fixed bg-$vt-c-bg select-none cursor-wait z-10" style="touch-action:none;" :style="style">
     👋 Drag me!
     <div class="text-sm opacity-50">
       I am at {{ Math.round(x) }}, {{ Math.round(y) }}
@@ -131,7 +124,8 @@ useFavicon().value = 'cookie.svg'
   </div>
   <div>
     <div m-b-8 p-8 m-auto>
-      <a-input-search v-model="phonenum" :style="{width:'360px'}" placeholder="输入手机号" button-text="搜索" search-button @press-enter="go()" @search="go" />
+      <a-input-search v-model="phonenum" :style="{ width: '360px' }" placeholder="输入手机号" button-text="搜索" search-button
+        @press-enter="go()" @search="go" />
     </div>
 
     <div flex p-4>
@@ -163,19 +157,14 @@ useFavicon().value = 'cookie.svg'
         </p>
         <s-space>
           延期时间：
-          <a-date-picker
-            v-model="pick_date2"
-            w-220px
-            shortcuts-position="right"
-            position="bl"
-            :shortcuts="shortcuts"
-          />
+          <a-date-picker v-model="pick_date2" w-220px shortcuts-position="right" position="bl" :shortcuts="shortcuts" />
         </s-space>
         <a-space>
           业务人员：
-          <a-auto-complete :data="useroptions" :style="{width:'220px'}" :placeholder="weixindata.data.data[0].user_name " />
+          <a-auto-complete :data="useroptions" :style="{ width: '220px' }"
+            :placeholder="weixindata.data.data[0].user_name" />
         </a-space>
-        <a-button m-t-2 type="primary" long @click="app_yanqi(weixindata.data.data[0],15)">
+        <a-button m-t-2 type="primary" long @click="app_yanqi(weixindata.data.data[0], 15)">
           延期到 {{ pick_date2 }}
         </a-button>
       </a-space>
@@ -206,7 +195,7 @@ useFavicon().value = 'cookie.svg'
               {{ item.MODULES_NAME }}
               <br>
               [
-              {{ dayjs(item.STARTTIME ).format('YYYY-MM-DD') }}  ~  {{ dayjs(item.ENDTIME).format('YYYY-MM-DD') }}
+              {{ dayjs(item.STARTTIME).format('YYYY-MM-DD') }} ~ {{ dayjs(item.ENDTIME).format('YYYY-MM-DD') }}
               ]
             </p>
           </div>
