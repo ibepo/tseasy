@@ -1,1 +1,0 @@
-import{_ as e}from"./index.eac2c5cd.js";import{c as o,o as r}from"./vendor.b60d91de.js";const _={};function c(n,t){return r(),o("div",null," not found page ")}var l=e(_,[["render",c]]);export{l as default};
